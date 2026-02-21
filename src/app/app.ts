@@ -5,8 +5,8 @@ import { RouterOutlet, RouterLink } from '@angular/router'; // Add RouterLink he
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, RouterLink], // Add it here too
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  templateUrl: './app.html',
+  styleUrl: './app.css'
 })
 export class AppComponent {
   title = signal('jay-portfolio'); // Modern Angular uses signals!
