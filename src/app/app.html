@@ -19,7 +19,7 @@
       
       <p class="mb-6 min-h-[3rem]">
   <span class="text-blue-400">{{ displayText }}</span>
-</p>
+
         <span class="text-blue-400">Jay Kadi</span> — Full-stack Developer & Creative Architect. 
         Building digital experiences with Angular, Tailwind, and a touch of wit.
       </p>
@@ -36,5 +36,53 @@
     <a href="#" class="hover:text-emerald-400 transition-colors">Stack</a>
     <a href="#" class="hover:text-emerald-400 transition-colors">Contact</a>
   </div>
+  <div class="mt-8 flex items-center gap-4">
+  <button class="group flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/50 hover:bg-emerald-500 hover:text-[#0d1117] px-4 py-2 rounded font-mono text-sm transition-all duration-300">
+    <span class="text-emerald-400 group-hover:text-[#0d1117]">./download_cv.sh</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+    </svg>
+  </button>
+  
+  <span class="text-xs text-slate-500 font-mono hidden sm:inline italic">
+    // Size: 1.2MB
+  </span>
+</div>
+<section class="bg-[#0d1117] pb-20 px-6">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-2xl font-mono text-emerald-400 mb-8 flex items-center gap-2">
+      <span class="text-slate-500">01.</span> Selected_Works
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      @for (project of projects; track project.title) {
+        <div class="group relative bg-[#161b22] border border-slate-800 p-6 rounded-xl hover:border-emerald-500/50 transition-all duration-300">
+          
+          <div class="text-emerald-500 mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+            </svg>
+          </div>
+
+          <h3 class="text-xl font-bold text-slate-100 group-hover:text-emerald-400 transition-colors">
+            {{ project.title }}
+          </h3>
+          
+          <p class="text-slate-400 text-sm mt-3 leading-relaxed">
+            {{ project.description }}
+          </p>
+
+          <div class="flex flex-wrap gap-2 mt-6">
+            @for (skill of project.tech; track skill) {
+              <span class="text-[10px] font-mono bg-slate-800 text-slate-300 px-2 py-1 rounded">
+                {{ skill }}
+              </span>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
 
 </main>

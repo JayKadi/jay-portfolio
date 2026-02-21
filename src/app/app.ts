@@ -10,6 +10,26 @@ import { CommonModule } from '@angular/common'; // Needed for typing effects
   styleUrl: './app.css'
 })
 export class AppComponent implements OnInit {
+  projects = [
+    {
+      title: 'E-Commerce Engine',
+      description: 'A high-performance shop built with Angular and Stripe integration.',
+      tech: ['Angular', 'Tailwind', 'Node.js'],
+      link: '#'
+    },
+    {
+      title: 'AI Chat Dashboard',
+      description: 'Real-time interface for interacting with LLMs using WebSockets.',
+      tech: ['TypeScript', 'Firebase', 'OpenAI'],
+      link: '#'
+    },
+    {
+      title: 'Crypto Tracker',
+      description: 'Live data visualization for digital assets with custom alerts.',
+      tech: ['RxJS', 'D3.js', 'API'],
+      link: '#'
+    }
+  ];
   fullBio = "Jay Kadi — Full-stack Developer & Creative Architect. Building digital experiences with Angular, Tailwind, and a touch of wit.";
   displayText = "";
   typingSpeed = 40; // milliseconds per character
