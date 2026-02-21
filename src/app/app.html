@@ -84,5 +84,22 @@
     </div>
   </div>
 </section>
+<section class="bg-[#0d1117] py-20 px-6 border-t border-slate-800/50">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-2xl font-mono text-emerald-400 mb-10 flex items-center gap-2">
+      <span class="text-slate-500">02.</span> Technical_Kernel
+    </h2>
+
+    <div class="flex flex-wrap gap-4 justify-center">
+      @for (skill of skills; track skill.name) {
+        <div class="px-5 py-2 bg-[#161b22] border border-slate-700 rounded-full flex items-center gap-3 hover:border-emerald-500/50 hover:bg-emerald-500/5 transition-all cursor-default group">
+          <span class="w-2 h-2 rounded-full bg-slate-600 group-hover:bg-emerald-500 animate-pulse"></span>
+          <span class="font-mono text-sm text-slate-300">{{ skill.name }}</span>
+          <span class="text-[10px] text-slate-500 font-bold uppercase tracking-tighter">{{ skill.level }}</span>
+        </div>
+      }
+    </div>
+  </div>
+</section>
 
 </main>

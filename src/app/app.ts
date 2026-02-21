@@ -30,6 +30,15 @@ export class AppComponent implements OnInit {
       link: '#'
     }
   ];
+  skills = [
+  { name: 'Angular', level: 'Expert', color: 'text-red-500' },
+  { name: 'TypeScript', level: 'Advanced', color: 'text-blue-500' },
+  { name: 'Tailwind CSS', level: 'Expert', color: 'text-cyan-400' },
+  { name: 'Node.js', level: 'Intermediate', color: 'text-green-500' },
+  { name: 'PostgreSQL', level: 'Intermediate', color: 'text-indigo-400' },
+  { name: 'Firebase', level: 'Advanced', color: 'text-yellow-500' },
+  { name: 'Git', level: 'Expert', color: 'text-orange-600' }
+];
   fullBio = "Jay Kadi — Full-stack Developer & Creative Architect. Building digital experiences with Angular, Tailwind, and a touch of wit.";
   displayText = "";
   typingSpeed = 40; // milliseconds per character
