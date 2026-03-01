@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CommonModule } from '@angular/common'; // Needed for typing effects
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -10,41 +10,42 @@ import { CommonModule } from '@angular/common'; // Needed for typing effects
   styleUrl: './app.css'
 })
 export class AppComponent implements OnInit {
-  projects = [
-    {
-      title: 'E-Commerce Engine',
-      description: 'A high-performance shop built with Angular and Stripe integration.',
-      tech: ['Angular', 'Tailwind', 'Node.js'],
-      link: '#'
-    },
-    {
-      title: 'AI Chat Dashboard',
-      description: 'Real-time interface for interacting with LLMs using WebSockets.',
-      tech: ['TypeScript', 'Firebase', 'OpenAI'],
-      link: '#'
-    },
-    {
-      title: 'Crypto Tracker',
-      description: 'Live data visualization for digital assets with custom alerts.',
-      tech: ['RxJS', 'D3.js', 'API'],
-      link: '#'
-    }
-  ];
-  skills = [
-  { name: 'Angular', level: 'Expert', color: 'text-red-500' },
-  { name: 'TypeScript', level: 'Advanced', color: 'text-blue-500' },
-  { name: 'Tailwind CSS', level: 'Expert', color: 'text-cyan-400' },
-  { name: 'Node.js', level: 'Intermediate', color: 'text-green-500' },
-  { name: 'PostgreSQL', level: 'Intermediate', color: 'text-indigo-400' },
-  { name: 'Firebase', level: 'Advanced', color: 'text-yellow-500' },
-  { name: 'Git', level: 'Expert', color: 'text-orange-600' }
-];
   fullBio = "Jay Kadi — Full-stack Developer & Creative Architect. Building digital experiences with Angular, Tailwind, and a touch of wit.";
   displayText = "";
-  typingSpeed = 40; // milliseconds per character
+  typingSpeed = 40;
+
+  // 1. Ensure your data arrays are here
+  projects = [
+    { title: 'E-Commerce Engine', description: 'Built with Angular & Stripe.', tech: ['Angular', 'Node.js'], link: '#' },
+    { title: 'AI Dashboard', description: 'Real-time LLM interface.', tech: ['TypeScript', 'OpenAI'], link: '#' }
+  ];
+
+  skills = [
+    { name: 'Angular', level: 'Expert' },
+    { name: 'TypeScript', level: 'Advanced' }
+  ];
 
   ngOnInit() {
     this.typeEffect();
+  }
+
+  // 2. Add the scrollTo method inside the class
+  scrollTo(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  // 3. Add the handleCommand method for the terminal
+  handleCommand(command: string) {
+    const cmd = command.toLowerCase().trim();
+    if (cmd === 'projects') {
+      this.scrollTo('projects');
+    } else if (cmd === 'clear') {
+      this.displayText = '';
+    }
+    // Add more commands as you like!
   }
 
   typeEffect() {

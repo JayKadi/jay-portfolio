@@ -32,10 +32,10 @@
   </div>
 
   <div class="mt-8 flex gap-6 font-mono text-xs uppercase tracking-widest text-slate-500">
-    <a href="#" class="hover:text-emerald-400 transition-colors">Projects</a>
-    <a href="#" class="hover:text-emerald-400 transition-colors">Stack</a>
-    <a href="#" class="hover:text-emerald-400 transition-colors">Contact</a>
-  </div>
+  <button (click)="scrollTo('projects')" class="hover:text-emerald-400 transition-colors">Projects</button>
+  <button (click)="scrollTo('stack')" class="hover:text-emerald-400 transition-colors">Stack</button>
+  <button (click)="scrollTo('contact')" class="hover:text-emerald-400 transition-colors">Contact</button>
+</div>
   <div class="mt-8 flex items-center gap-4">
   <button class="group flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/50 hover:bg-emerald-500 hover:text-[#0d1117] px-4 py-2 rounded font-mono text-sm transition-all duration-300">
     <span class="text-emerald-400 group-hover:text-[#0d1117]">./download_cv.sh</span>
