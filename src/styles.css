@@ -1,3 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
+/* 1. The CRT "Glass" Effect */
+.crt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* Creates the horizontal scanlines */
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.1) 50%
+  ), 
+  linear-gradient(
+    90deg, 
+    rgba(255, 0, 0, 0.03), 
+    rgba(0, 255, 0, 0.01), 
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 3px 100%;
+  pointer-events: none; /* Crucial: lets you click buttons underneath */
+  z-index: 1000;
+}
+
+/* 2. The Screen Flicker */
+@keyframes flicker {
+  0% { opacity: 0.98; }
+  5% { opacity: 0.95; }
+  10% { opacity: 0.99; }
+  15% { opacity: 0.94; }
+  25% { opacity: 0.98; }
+  30% { opacity: 1; }
+  100% { opacity: 0.98; }
+}
+
+.crt-flicker {
+  animation: flicker 0.15s infinite;
+  pointer-events: none;
+}
+
+/* 3. The Vignette (Dark corners like an old tube TV) */
+.vignette {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 150px rgba(0,0,0,0.6);
+  pointer-events: none;
+  z-index: 1001;
+}
