@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -13,6 +14,7 @@ export class AppComponent implements OnInit {
   fullBio = "Jay Kadi — Full-stack Developer & Creative Architect. Building digital experiences with Angular, Tailwind, and a touch of wit.";
   displayText = "";
   typingSpeed = 40;
+  emailStatus = "jaykadi42@gmail.com";
 
   // 1. Ensure your data arrays are here
   projects = [
@@ -24,6 +26,17 @@ export class AppComponent implements OnInit {
     { name: 'Angular', level: 'Expert' },
     { name: 'TypeScript', level: 'Advanced' }
   ];
+  // 2. The function that uses that variable
+  copyEmail() {
+    navigator.clipboard.writeText('jaykadi42@gmail.com');
+    
+    // This line was causing the error because 'emailStatus' wasn't declared above
+    this.emailStatus = "COPIED TO CLIPBOARD!"; 
+    
+    setTimeout(() => {
+      this.emailStatus = "jaykadi42@gmail.com";
+    }, 2000);
+  }
 
   ngOnInit() {
     this.typeEffect();

@@ -103,11 +103,42 @@
     </div>
   </div>
 </section>
-<footer id="contact" class="bg-[#0d1117] py-12 px-6 border-t border-slate-800">
-  <div class="max-w-5xl mx-auto text-center font-mono">
-    <p class="text-slate-500 mb-4">SYSTEM_STATUS: ONLINE</p>
-    <a href="mailto:jay@example.com" class="text-emerald-400 hover:underline">CONTACT_ME</a>
+<footer id="contact" class="bg-[#0d1117] py-20 px-6 border-t border-slate-800">
+  <div class="max-w-3xl mx-auto text-center font-mono">
+    
+    <div class="inline-block bg-[#161b22] border border-slate-700 p-8 rounded-lg text-left shadow-2xl w-full">
+      <h3 class="text-emerald-400 mb-4 text-xl font-bold italic">> establish_connection.exe</h3>
+      
+      <p class="text-slate-400 mb-8 leading-relaxed text-sm">
+        System is currently accepting new project requests. Execute a command below to reach out.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <button (click)="copyEmail()" class="flex items-center gap-3 p-4 bg-slate-800/30 rounded border border-slate-700 hover:border-emerald-500 transition-all active:scale-95 group text-left">
+          <div class="flex flex-col">
+            <span class="text-emerald-400 text-[10px] uppercase font-bold tracking-widest">Email_Address</span>
+            <span class="text-slate-200 text-sm truncate">{{ emailStatus }}</span>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-auto text-slate-600 group-hover:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+          </svg>
+        </button>
+
+        <a href="https://www.linkedin.com/in/jay-kadi-0b3097261/?originalSubdomain=ke" target="_blank" class="flex items-center gap-3 p-4 bg-slate-800/30 rounded border border-slate-700 hover:border-emerald-500 transition-all group">
+          <div class="flex flex-col">
+            <span class="text-emerald-400 text-[10px] uppercase font-bold tracking-widest">LinkedIn_Profile</span>
+            <span class="text-slate-200 text-sm">/in/jay-kadi</span>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-auto text-slate-600 group-hover:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <p class="mt-12 text-[10px] text-slate-700 uppercase tracking-[0.5em]">
+      &copy; 2026 Jay Kadi &mdash; Connection Secured
+    </p>
   </div>
 </footer>
-
 </main>
