@@ -48,7 +48,7 @@
     // Size: 1.2MB
   </span>
 </div>
-<section class="bg-[#0d1117] pb-20 px-6">
+<section id="projects" class="bg-[#0d1117] pb-20 px-6">
   <div class="max-w-5xl mx-auto">
     <h2 class="text-2xl font-mono text-emerald-400 mb-8 flex items-center gap-2">
       <span class="text-slate-500">01.</span> Selected_Works
@@ -73,6 +73,7 @@
           </p>
 
           <div class="flex flex-wrap gap-2 mt-6">
+            
             @for (skill of project.tech; track skill) {
               <span class="text-[10px] font-mono bg-slate-800 text-slate-300 px-2 py-1 rounded">
                 {{ skill }}
@@ -84,7 +85,8 @@
     </div>
   </div>
 </section>
-<section class="bg-[#0d1117] py-20 px-6 border-t border-slate-800/50">
+<section id="stack" class="bg-[#0d1117] py-20 px-6 border-t border-slate-800/50">
+  
   <div class="max-w-5xl mx-auto">
     <h2 class="text-2xl font-mono text-emerald-400 mb-10 flex items-center gap-2">
       <span class="text-slate-500">02.</span> Technical_Kernel
@@ -101,5 +103,11 @@
     </div>
   </div>
 </section>
+<footer id="contact" class="bg-[#0d1117] py-12 px-6 border-t border-slate-800">
+  <div class="max-w-5xl mx-auto text-center font-mono">
+    <p class="text-slate-500 mb-4">SYSTEM_STATUS: ONLINE</p>
+    <a href="mailto:jay@example.com" class="text-emerald-400 hover:underline">CONTACT_ME</a>
+  </div>
+</footer>
 
 </main>
