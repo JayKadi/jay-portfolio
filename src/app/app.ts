@@ -11,21 +11,51 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.css'
 })
 export class AppComponent implements OnInit {
-  fullBio = "Jay Kadi — Full-stack Developer & Creative Architect. Building digital experiences with Angular, Tailwind, and a touch of wit.";
+  fullBio = "Jay Kadi — Full-stack Developer & IT Systems Architect. Bridging the gap between ICT infrastructure and modern web ecosystems. Currently building solutions that automate support and streamline digital commerce.";
   displayText = "";
   typingSpeed = 40;
   emailStatus = "jaykadi42@gmail.com";
 
   // 1. Ensure your data arrays are here
   projects = [
-    { title: 'E-Commerce Engine', description: 'Built with Angular & Stripe.', tech: ['Angular', 'Node.js'], link: '#' },
-    { title: 'AI Dashboard', description: 'Real-time LLM interface.', tech: ['TypeScript', 'OpenAI'], link: '#' }
-  ];
+  { 
+    title: 'ITKit — Knowledge Base', 
+    description: 'Modern self-service IT portal reducing support tickets via intelligent search and real-time analytics.', 
+    tech: ['React 18', 'Node.js', 'Supabase', 'PostgreSQL'],
+    live: 'https://itkit.vercel.app',
+    github: 'https://github.com/JayKadi' // Update with specific repo link if different
+  },
+  { 
+    title: 'Kadi Thrift E-commerce', 
+    description: 'Full-stack second-hand apparel platform with M-Pesa/Pesapal integration and Cloudinary media management.', 
+    tech: ['Django REST', 'React', 'PostgreSQL', 'Cloudinary'],
+    live: 'https://kadi-thrift.vercel.app',
+    github: 'https://github.com/JayKadi'
+  },
+  { 
+    title: 'Expense Tracker Pro', 
+    description: 'Finance dashboard featuring JWT/Google OAuth, interactive Recharts data viz, and CSV exports.', 
+    tech: ['Python', 'Django', 'Vite', 'Recharts'],
+    live: 'https://expense-tracker-kappa-mocha.vercel.app',
+    github: 'https://github.com/JayKadi'
+  },
+  { 
+    title: 'Smart AI Calculator', 
+    description: 'Voice-interactive calculator with scientific modes, unit conversion, and speech-to-text feedback.', 
+    tech: ['Speech API', 'Framer Motion', 'React', 'LocalStorage'],
+    live: 'https://calculator-react-project-five.vercel.app',
+    github: 'https://github.com/JayKadi'
+  }
+];
 
   skills = [
-    { name: 'Angular', level: 'Expert' },
-    { name: 'TypeScript', level: 'Advanced' }
-  ];
+  { name: 'TypeScript/Angular', level: 'Learning' },
+  { name: 'React/Vite', level: 'Expert' },
+  { name: 'Django/Node.js', level: 'Intermediate' },
+  { name: 'PostgreSQL/Supabase', level: 'Advanced' },
+  { name: 'Cloudinary/Pesapal', level: 'Integration' },
+  { name: 'Vercel/Railway', level: 'DevOps' }
+];
   // 2. The function that uses that variable
   copyEmail() {
     navigator.clipboard.writeText('jaykadi42@gmail.com');
