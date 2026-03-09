@@ -19,13 +19,6 @@ export class AppComponent implements OnInit {
   // 1. Ensure your data arrays are here
   projects = [
   { 
-    title: 'ITKit — Knowledge Base', 
-    description: 'Modern self-service IT portal reducing support tickets via intelligent search and real-time analytics.', 
-    tech: ['React 18', 'Node.js', 'Supabase', 'PostgreSQL'],
-    live: 'https://itkit.vercel.app',
-    github: 'https://github.com/JayKadi' // Update with specific repo link if different
-  },
-  { 
     title: 'Kadi Thrift E-commerce', 
     description: 'Full-stack second-hand apparel platform with M-Pesa/Pesapal integration and Cloudinary media management.', 
     tech: ['Django REST', 'React', 'PostgreSQL', 'Cloudinary'],
